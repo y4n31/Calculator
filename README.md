@@ -1,2 +1,2 @@
 # Calculator
-TOP project
+TOP project. HTML, CSS, JS WEB Calculator
