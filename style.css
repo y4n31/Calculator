@@ -6,6 +6,9 @@
 button {
     width: 70px;
     height: 70px;
+    margin: 5px;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 .container {
@@ -21,7 +24,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     background-color: rgb(67, 37, 37);
     width: 400px;
     height: 500px;
@@ -31,16 +34,30 @@ button {
     display: flex;
     width: 100%;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 20px;
 }
 
 .number-buttons {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .operator-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
+ 
+}
+
+.row-buttons {
+    display: flex;
+}
+
+#row0 {
+    flex-direction: row-reverse;
+}
+
+#row4 {
+    justify-content: end;
 }
