@@ -28,13 +28,26 @@ button {
     background-color: rgb(67, 37, 37);
     width: 400px;
     height: 500px;
+    padding: 20px 0px 20px 0px;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.display input {
+    width: 100%;
+    margin: 30px;
+    font-size: 25px;
 }
 
 .buttons {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .number-buttons {
