@@ -34,6 +34,12 @@ function operate(num1, num2, operator) {
 
 let displayValue = 0;
 
+
+
 for(let i = 0; i < digitButton.length; i++) {
-    digitButton[i].addEventListener('click', displayValue = digitButton[i].value);
+    function display() {
+        displayValue = digitButton[i].textContent;
+        displayField.textContent = displayValue;
+    };
+    digitButton[i].addEventListener('click', display)
 };
