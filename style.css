@@ -38,10 +38,16 @@ button {
     width: 100%;
 }
 
-.display input {
+.display div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 100%;
     margin: 30px;
-    font-size: 25px;
+    font-size: 95px;
+    padding-right: 10px;
 }
 
 .buttons {
