@@ -1,3 +1,6 @@
+const displayField = document.querySelector('#display-field');
+const digitButton = document.getElementsByClassName('digit-buttons')
+
 function add(a, b) {
     return a + b;
 };
@@ -27,4 +30,10 @@ function operate(num1, num2, operator) {
         case '/':
             return divide(num1, num2);
     };
+};
+
+let displayValue = 0;
+
+for(let i = 0; i < digitButton.length; i++) {
+    digitButton[i].addEventListener('click', displayValue = digitButton[i].value);
 };
