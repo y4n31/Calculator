@@ -32,14 +32,14 @@ function operate(num1, num2, operator) {
     };
 };
 
-let displayValue = 0;
+let displayValue;
 
 
 
 for(let i = 0; i < digitButton.length; i++) {
     function display() {
         displayValue = digitButton[i].textContent;
-        displayField.textContent = displayValue;
+        displayField.textContent += displayValue;
     };
     digitButton[i].addEventListener('click', display)
 };
