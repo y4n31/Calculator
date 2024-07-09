@@ -34,11 +34,23 @@ function operate(num1, num2, operator) {
 };
 
 let displayValue;
+let spanStyle = window.getComputedStyle(displaySpan, null).getPropertyValue("font-size");
+let spanFontSize = parseFloat(spanStyle);
 
 for(let i = 0; i < digitButton.length; i++) {
     function display() {
         displayValue = digitButton[i].textContent;
         displaySpan.textContent += displayValue;
+        if (displaySpan.offsetLeft < 5) {
+            let j=0;
+            while(j < 10) {
+                digitButton[j].disabled = 'true';
+                j++;
+            }
+            console.log(displaySpan.textContent);
+        }
     };
     digitButton[i].addEventListener('click', display)
 };
+
+digitButton[0].addEventListener('click', function(){console.log(spanFontSize)});
