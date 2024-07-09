@@ -1,6 +1,13 @@
 const displayField = document.querySelector('#display-field');
 const displaySpan = document.querySelector('#display-span');
 const digitButton = document.getElementsByClassName('digit-buttons');
+const operationButton = document.getElementsByClassName('operation-buttons');
+const clearButton = document.getElementById('clear');
+const plusButton = document.getElementById('add');
+const minusButton = document.getElementById('subtract');
+const multiplyButton = document.getElementById('multiply');
+const divideButton = document.getElementById('divide');
+const equalButton = document.getElementById('equal');
 
 function add(a, b) {
     return a + b;
