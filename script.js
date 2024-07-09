@@ -1,5 +1,6 @@
 const displayField = document.querySelector('#display-field');
-const digitButton = document.getElementsByClassName('digit-buttons')
+const displaySpan = document.querySelector('#display-span');
+const digitButton = document.getElementsByClassName('digit-buttons');
 
 function add(a, b) {
     return a + b;
@@ -34,12 +35,10 @@ function operate(num1, num2, operator) {
 
 let displayValue;
 
-
-
 for(let i = 0; i < digitButton.length; i++) {
     function display() {
         displayValue = digitButton[i].textContent;
-        displayField.textContent += displayValue;
+        displaySpan.textContent += displayValue;
     };
     digitButton[i].addEventListener('click', display)
 };
