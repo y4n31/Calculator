@@ -60,4 +60,8 @@ for(let i = 0; i < digitButton.length; i++) {
     digitButton[i].addEventListener('click', display)
 };
 
+clearButton.addEventListener('click', function(){
+    displaySpan.textContent = '';
+})
+
 digitButton[0].addEventListener('click', function(){console.log(spanFontSize)});
