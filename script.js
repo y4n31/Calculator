@@ -35,9 +35,9 @@ function operate(num1, num2, operator) {
             return add(num1, num2);
         case '-':
             return subtract(num1, num2);
-        case '*':
+        case 'x':
             return multiply(num1, num2);
-        case '/':
+        case ':':
             return divide(num1, num2);
     };
 };
@@ -74,9 +74,18 @@ function assignValues() {
 
 function callOperate() {
     secondNum = displaySpan.textContent;
-    displaySpan.textContent = operate(firstNum, secondNum, operator);
+    if(secondNum == 0 && operator == ':') {
+        displaySpan.style.fontSize = '55px';
+        displaySpan.textContent = 'R U DUMB?';
+    } else {
+        displaySpan.textContent = operate(firstNum, secondNum, operator);
+    }
 }
 
 plusButton.addEventListener('click', assignValues);
+minusButton.addEventListener('click', assignValues);
+multiplyButton.addEventListener('click', assignValues);
+divideButton.addEventListener('click', assignValues);
+
 
 equalButton.addEventListener('click', callOperate);
