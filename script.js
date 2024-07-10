@@ -36,9 +36,9 @@ function operate(num1, num2, operator) {
         case '-':
             return subtract(num1, num2);
         case 'x':
-            return multiply(num1, num2);
+            return multiply(num1, num2).toFixed(2);
         case ':':
-            return divide(num1, num2);
+            return divide(num1, num2).toFixed(2);
     };
 };
 
@@ -86,6 +86,5 @@ plusButton.addEventListener('click', assignValues);
 minusButton.addEventListener('click', assignValues);
 multiplyButton.addEventListener('click', assignValues);
 divideButton.addEventListener('click', assignValues);
-
 
 equalButton.addEventListener('click', callOperate);
