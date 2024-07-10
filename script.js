@@ -28,6 +28,8 @@ function divide(a, b) {
 let firstNum, secondNum, operator;
 
 function operate(num1, num2, operator) {
+    num1 = parseInt(num1);
+    num2 = parseInt(num2);
     switch (operator) {
         case '+':
             return add(num1, num2);
@@ -57,11 +59,24 @@ for(let i = 0; i < digitButton.length; i++) {
             console.log(displaySpan.textContent);
         }
     };
-    digitButton[i].addEventListener('click', display)
+    digitButton[i].addEventListener('click', display);
 };
 
 clearButton.addEventListener('click', function(){
     displaySpan.textContent = '';
-})
+});
 
-digitButton[0].addEventListener('click', function(){console.log(spanFontSize)});
+function assignValues() {
+    firstNum = displaySpan.textContent;
+    operator = this.textContent;
+    displaySpan.textContent = '';
+};
+
+function callOperate() {
+    secondNum = displaySpan.textContent;
+    displaySpan.textContent = operate(firstNum, secondNum, operator);
+}
+
+plusButton.addEventListener('click', assignValues);
+
+equalButton.addEventListener('click', callOperate);
