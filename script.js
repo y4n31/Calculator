@@ -82,7 +82,7 @@ function callOperate() {
         displaySpan.textContent = 'R U DUMB?';
     } else {
         displayValue = operate(firstNum, secondNum, operator);
-        if(displayValue % 2 != 0 && operator == 'x' || operator == ':') {
+        if(!Number.isInteger(displayValue)) {
             displaySpan.textContent = displayValue.toFixed(2);
         } else {
             displaySpan.textContent = displayValue;
