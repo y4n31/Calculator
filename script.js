@@ -63,6 +63,7 @@ for(let i = 0; i < digitButton.length; i++) {
 };
 
 clearButton.addEventListener('click', function(){
+    displayValue = '';
     displaySpan.textContent = '';
 });
 
