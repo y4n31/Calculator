@@ -36,9 +36,9 @@ function operate(num1, num2, operator) {
         case '-':
             return subtract(num1, num2);
         case 'x':
-            return multiply(num1, num2).toFixed(2);
+            return multiply(num1, num2);
         case ':':
-            return divide(num1, num2).toFixed(2);
+            return divide(num1, num2);
     };
 };
 
@@ -81,7 +81,12 @@ function callOperate() {
         displaySpan.style.fontSize = '55px';
         displaySpan.textContent = 'R U DUMB?';
     } else {
-        displaySpan.textContent = operate(firstNum, secondNum, operator);
+        displayValue = operate(firstNum, secondNum, operator);
+        if(displayValue % 2 != 0) {
+            displaySpan.textContent = displayValue.toFixed(2);
+        } else {
+            displaySpan.textContent = displayValue;
+        }
     }
 }
 
