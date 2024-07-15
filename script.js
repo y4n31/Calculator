@@ -49,7 +49,8 @@ let spanFontSize = parseFloat(spanStyle);
 for(let i = 0; i < digitButton.length; i++) {
     function display() {
         displayValue = digitButton[i].textContent;
-        displaySpan.textContent += displayValue;
+        
+        displayValue != 0 ? displaySpan.textContent += displayValue : displaySpan.textContent = displayValue;
         if (displaySpan.offsetLeft < 5) {
             let j=0;
             while(j < 10) {
@@ -86,7 +87,7 @@ function callOperate() {
             displaySpan.textContent = displayValue.toFixed(2);
         } else {
             displaySpan.textContent = displayValue;
-        }
+        };
     }
 }
 
