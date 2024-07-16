@@ -77,18 +77,23 @@ function assignValues() {
 };
 
 function callOperate() {
-    secondNum = displaySpan.textContent;
-    if(secondNum == 0 && operator == ':') {
-        displaySpan.style.fontSize = '55px';
-        displaySpan.textContent = 'R U DUMB?';
-    } else {
-        displayValue = operate(firstNum, secondNum, operator);
-        if(!Number.isInteger(displayValue)) {
-            displaySpan.textContent = displayValue.toFixed(2);
+    if(firstNum != null && secondNum != null) {
+            secondNum = displaySpan.textContent;
+        if(secondNum == 0 && operator == ':') {
+            displaySpan.style.fontSize = '55px';
+            displaySpan.textContent = 'R U DUMB?';
         } else {
-            displaySpan.textContent = displayValue;
+            displayValue = operate(firstNum, secondNum, operator);
+            if(!Number.isInteger(displayValue)) {
+                displaySpan.textContent = displayValue.toFixed(2);
+            } else {
+                displaySpan.textContent = displayValue;
+            };
         };
+    } else {
+        displaySpan.textContent = '';
     }
+    
 }
 
 plusButton.addEventListener('click', assignValues);
