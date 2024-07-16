@@ -50,7 +50,7 @@ for(let i = 0; i < digitButton.length; i++) {
     function display() {
         displayValue = digitButton[i].textContent;
         
-        displayValue != 0 ? displaySpan.textContent += displayValue : displaySpan.textContent = displayValue;
+        displaySpan.textContent[0] != 0 ? displaySpan.textContent += displayValue : displaySpan.textContent = displayValue;
         if (displaySpan.offsetLeft < 5) {
             let j=0;
             while(j < 10) {
