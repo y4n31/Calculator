@@ -26,6 +26,7 @@ function divide(a, b) {
 };
 
 let firstNum, secondNum, operator;
+firstNum, secondNum = 0;
 
 function operate(num1, num2, operator) {
     num1 = parseInt(num1);
@@ -93,8 +94,7 @@ function callOperate() {
     } else {
         displaySpan.textContent = '';
     }
-    
-}
+};
 
 plusButton.addEventListener('click', assignValues);
 minusButton.addEventListener('click', assignValues);
