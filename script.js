@@ -29,8 +29,8 @@ let firstNum, secondNum, operator;
 firstNum, secondNum = 0;
 
 function operate(num1, num2, operator) {
-    num1 = parseInt(num1);
-    num2 = parseInt(num2);
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
     switch (operator) {
         case '+':
             return add(num1, num2);
@@ -58,8 +58,7 @@ for(let i = 0; i < digitButton.length; i++) {
                 digitButton[j].disabled = 'true';
                 j++;
             }
-            console.log(displaySpan.textContent);
-        }
+        };
     };
     digitButton[i].addEventListener('click', display);
 };
