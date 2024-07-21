@@ -29,7 +29,7 @@ button, button:disabled {
     justify-content: end;
     background-color: rgb(67, 37, 37);
     width: 400px;
-    height: 500px;
+    height: 550px;
     padding: 20px 0px 20px 0px;
 }
 
@@ -49,7 +49,7 @@ button, button:disabled {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 100%;
     overflow: auto;
-    margin: 30px;
+    margin: 10px 30px;
     font-size: 95px;
     padding: 0px, 10px;
 }
@@ -89,4 +89,8 @@ button, button:disabled {
 
 #row4 {
     justify-content: end;
+}
+
+#row5 button {
+    flex-grow: 2;
 }
