@@ -60,11 +60,7 @@ for(let i = 0; i < digitButton.length; i++) {
             }
         };
         for(let k = 0; k < displaySpan.textContent.length; k++) {
-            if(displaySpan.textContent[k+1] == '.') {
-                document.getElementById('dot').disabled = 'true';
-            } else {
-                
-            }
+            !displaySpan.textContent.includes('.') ? document.getElementById('dot').disabled = false : document.getElementById('dot').disabled = true;
         };
     };
     digitButton[i].addEventListener('click', display);
