@@ -59,6 +59,13 @@ for(let i = 0; i < digitButton.length; i++) {
                 j++;
             }
         };
+        for(let k = 0; k < displaySpan.textContent.length; k++) {
+            if(displaySpan.textContent[k+1] == '.') {
+                document.getElementById('dot').disabled = 'true';
+            } else {
+                
+            }
+        };
     };
     digitButton[i].addEventListener('click', display);
 };
