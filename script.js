@@ -96,6 +96,10 @@ function callOperate() {
     } else {
         displaySpan.textContent = '';
     }
+    
+    if(isNaN(displaySpan.textContent)) {
+        displaySpan.textContent = '';
+    }; 
 };
 
 plusButton.addEventListener('click', assignValues);
