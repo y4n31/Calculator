@@ -110,11 +110,17 @@ function callOperate() {
         };
     } else {
         displaySpan.textContent = '';
-    }
+    };
 
     if(isNaN(displaySpan.textContent)) {
         displaySpan.textContent = '';
     }; 
+
+    if(displaySpan.textContent.length > 7) {
+        displaySpan.style.fontSize = '65px';
+        let largeResult = parseFloat(displaySpan.textContent);
+        displaySpan.textContent = largeResult.toExponential(5);       
+    }
 };
 
 plusButton.addEventListener('click', assignValues);
