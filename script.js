@@ -52,13 +52,14 @@ for(let i = 0; i < digitButton.length; i++) {
         displayValue = digitButton[i].textContent;
         
         displaySpan.textContent[0] != 0 ? displaySpan.textContent += displayValue : displaySpan.textContent = displayValue;
-        if (displaySpan.offsetLeft < 5) {
+        if (displaySpan.textContent.length == 7) {
             let j=0;
             while(j < 10) {
-                digitButton[j].disabled = 'true';
+                digitButton[j].disabled = true;
                 j++;
             }
         };
+
         for(let k = 0; k < displaySpan.textContent.length; k++) {
             !displaySpan.textContent.includes('.') ? document.getElementById('dot').disabled = false : document.getElementById('dot').disabled = true;
         };
@@ -71,12 +72,26 @@ clearButton.addEventListener('click', function(){
     firstNum = '';
     displayValue = '';
     displaySpan.textContent = '';
+    if(displaySpan.textContent.length < 7) {
+        let j = 0;
+            while(j < 10) {
+                digitButton[j].disabled = false;
+                j++;
+            };
+    };
 });
 
 function assignValues() {
     firstNum = displaySpan.textContent;
     operator = this.textContent;
     displaySpan.textContent = '';
+    if(displaySpan.textContent.length < 7) {
+        let j = 0;
+            while(j < 10) {
+                digitButton[j].disabled = false;
+                j++;
+            };
+    };
 };
 
 function callOperate() {
@@ -96,7 +111,7 @@ function callOperate() {
     } else {
         displaySpan.textContent = '';
     }
-    
+
     if(isNaN(displaySpan.textContent)) {
         displaySpan.textContent = '';
     }; 
