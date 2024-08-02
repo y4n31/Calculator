@@ -117,7 +117,7 @@ function callOperate() {
     }; 
 
     if(displaySpan.textContent.length > 7) {
-        displaySpan.style.fontSize = '65px';
+        displaySpan.style.fontSize = '63px';
         let largeResult = parseFloat(displaySpan.textContent);
         displaySpan.textContent = largeResult.toExponential(5);       
     }
