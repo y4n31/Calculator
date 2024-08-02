@@ -8,6 +8,7 @@ const minusButton = document.getElementById('subtract');
 const multiplyButton = document.getElementById('multiply');
 const divideButton = document.getElementById('divide');
 const equalButton = document.getElementById('equal');
+const backSpaceButton = document.getElementById('backspace');
 
 function add(a, b) {
     return a + b;
@@ -67,20 +68,6 @@ for(let i = 0; i < digitButton.length; i++) {
     digitButton[i].addEventListener('click', display);
 };
 
-clearButton.addEventListener('click', function(){
-    secondNum = '';
-    firstNum = '';
-    displayValue = '';
-    displaySpan.textContent = '';
-    if(displaySpan.textContent.length < 7) {
-        let j = 0;
-            while(j < 10) {
-                digitButton[j].disabled = false;
-                j++;
-            };
-    };
-});
-
 function assignValues() {
     firstNum = displaySpan.textContent;
     operator = this.textContent;
@@ -123,9 +110,30 @@ function callOperate() {
     }
 };
 
+clearButton.addEventListener('click', function(){
+    secondNum = '';
+    firstNum = '';
+    displayValue = '';
+    displaySpan.textContent = '';
+    if(displaySpan.textContent.length < 7) {
+        let j = 0;
+            while(j < 10) {
+                digitButton[j].disabled = false;
+                j++;
+            };
+    };
+});
+
+function eraseOneDigit () {
+    let displayStr = displaySpan.textContent.toString();
+    let erased = displayStr.replace(displayStr[displayStr.length-1], '');
+    displaySpan.textContent = erased;
+};
+
 plusButton.addEventListener('click', assignValues);
 minusButton.addEventListener('click', assignValues);
 multiplyButton.addEventListener('click', assignValues);
 divideButton.addEventListener('click', assignValues);
 
 equalButton.addEventListener('click', callOperate);
+backSpaceButton.addEventListener('click', eraseOneDigit);
