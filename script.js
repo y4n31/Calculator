@@ -59,7 +59,9 @@ for(let i = 0; i < digitButton.length; i++) {
                 digitButton[j].disabled = true;
                 j++;
             }
-        };
+        } else {
+            displaySpan.style.fontSize = '95px';
+        }
 
         for(let k = 0; k < displaySpan.textContent.length; k++) {
             !displaySpan.textContent.includes('.') ? document.getElementById('dot').disabled = false : document.getElementById('dot').disabled = true;
@@ -107,7 +109,7 @@ function callOperate() {
         displaySpan.style.fontSize = '63px';
         let largeResult = parseFloat(displaySpan.textContent);
         displaySpan.textContent = largeResult.toExponential(5);       
-    }
+    };
 };
 
 clearButton.addEventListener('click', function(){
