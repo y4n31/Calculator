@@ -146,6 +146,13 @@ function eraseOneDigit () {
     displaySpan.textContent = erased;
 };
 
+document.addEventListener('keydown', e => {
+    if(e.keyCode >= 48 && e.keyCode <= 57) {
+        displaySpan.textContent += e.key;
+        console.log(displaySpan.textContent);
+    }
+});
+
 plusButton.addEventListener('click', assignValues);
 minusButton.addEventListener('click', assignValues);
 multiplyButton.addEventListener('click', assignValues);
