@@ -52,7 +52,15 @@ for(let i = 0; i < digitButton.length; i++) {
     function display() {
         displayValue = digitButton[i].textContent;
         
-        displaySpan.textContent[0] != 0 ? displaySpan.textContent += displayValue : displaySpan.textContent = displayValue;
+        if(displaySpan.textContent[0] != 0){
+            displaySpan.textContent += displayValue;
+            if(isNaN(displaySpan.textContent)) {
+                displaySpan.textContent = displayValue;
+            };
+        }  else {
+            displaySpan.textContent = displayValue;
+        };
+
         if (displaySpan.textContent.length == 7) {
             let j=0;
             while(j < 10) {
