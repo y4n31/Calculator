@@ -103,12 +103,18 @@ function callOperate() {
 
     if(isNaN(displaySpan.textContent)) {
         displaySpan.textContent = '';
-    }; 
-
+    } else if(secondNum == 0 && operator == ':'){
+        displaySpan.style.fontSize = '55px';
+        displaySpan.textContent = 'R U DUMB?';
+    };
+    
     if(displaySpan.textContent.length > 7) {
         displaySpan.style.fontSize = '63px';
         let largeResult = parseFloat(displaySpan.textContent);
         displaySpan.textContent = largeResult.toExponential(5);       
+    } else if(secondNum == 0 && operator == ':'){
+        displaySpan.style.fontSize = '55px';
+        displaySpan.textContent = 'R U DUMB?';
     };
 };
 
